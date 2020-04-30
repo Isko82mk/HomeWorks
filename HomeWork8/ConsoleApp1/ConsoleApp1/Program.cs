@@ -1,4 +1,6 @@
-﻿using System;
+﻿using Domain;
+using Services;
+using System;
 
 namespace ConsoleApp1
 {
@@ -6,8 +8,22 @@ namespace ConsoleApp1
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+
+
+            Employee isko = new Employee("Ivica", "Janevski", 25000);
+
+            EmployeeServices services = new EmployeeServices();
+
+            services.PrintInfo(isko);
+            services.GetSalary(isko);
+            Console.WriteLine(services.GetSalary(isko));
+
+
+
             Console.ReadLine();
+
+
+
         }
     }
 }
