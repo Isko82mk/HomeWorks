@@ -43,18 +43,6 @@ namespace HomeWork9
                 Console.WriteLine("Error....no such name");
             }
             
-
-
-            //Console.WriteLine($"User ID is :{John.ID} user Name is : {John.Name} userPhomeNumber is {John.PhoneNumber}");
-
-
-            //foreach (KeyValuePair<int,PhoneBookUser> keyValuePair in phoneBook)
-            //{
-            //    Console.WriteLine("KeyValue{0}",keyValuePair.Key);
-            //    PhoneBookUser user = keyValuePair.Value;
-            //    Console.WriteLine($"User ID is :{user.ID} User Name :{user.Name}, User Phone Number {user.PhoneNumber}");
-            //    Console.WriteLine("---------------------------------------------------------------------------------------");
-            //}
             Console.ReadLine();
         }
         public class PhoneBookUser
