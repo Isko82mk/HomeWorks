@@ -28,11 +28,13 @@ namespace HomeWork9
 
             Console.WriteLine("Enter name");
             string userImput = Console.ReadLine();
+            string userUpper = char.ToUpper(userImput[0]) + userImput.Substring(1);
+
             bool noName = false;
             foreach (KeyValuePair<int, PhoneBookUser> keyValue in phoneBook)
             {
                 PhoneBookUser user = keyValue.Value;
-                if (userImput == user.Name)
+                if (userUpper == user.Name)
                 {
                     Console.WriteLine($"User {user.Name} phone number is {user.PhoneNumber} ");
                     noName = true;
