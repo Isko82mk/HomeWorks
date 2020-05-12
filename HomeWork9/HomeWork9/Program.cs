@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace HomeWork9
 {
@@ -20,23 +21,24 @@ namespace HomeWork9
             phoneBook.Add(bill.ID, jack);
             phoneBook.Add(villiam.ID,villiam);
 
-            PhoneBookUser John = phoneBook[1];
-            PhoneBookUser Mike = phoneBook[2];
-            PhoneBookUser Jack = phoneBook[3];
-            PhoneBookUser Bill = phoneBook[4];
-            PhoneBookUser Villiam = phoneBook[5];
+            //PhoneBookUser John = phoneBook[1];
+            //PhoneBookUser Mike = phoneBook[2];
+            //PhoneBookUser Jack = phoneBook[3];
+            //PhoneBookUser Bill = phoneBook[4];
+            //PhoneBookUser Villiam = phoneBook[5];
 
             Console.WriteLine("Enter name");
             string userImput = Console.ReadLine();
             string userUpper = char.ToUpper(userImput[0]) + userImput.Substring(1);
 
             bool noName = false;
+
             foreach (KeyValuePair<int, PhoneBookUser> keyValue in phoneBook)
             {
                 PhoneBookUser user = keyValue.Value;
                 if (userUpper == user.Name)
                 {
-                    Console.WriteLine($"User {user.Name} phone number is {user.PhoneNumber} ");
+                    Console.WriteLine($" The phone number of User {user.Name}  is {user.PhoneNumber} ");
                     noName = true;
                 }
             }
@@ -44,7 +46,7 @@ namespace HomeWork9
             {
                 Console.WriteLine("Error....no such name");
             }
-            
+
             Console.ReadLine();
         }
         public class PhoneBookUser
