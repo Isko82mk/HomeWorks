@@ -10,8 +10,8 @@ namespace Homwork9Task2
         {
 
             Queue<int> listOfNumbers = new Queue<int>();
-            bool ifYes = true;
-            while (ifYes)
+            //bool ifYes = true;
+            while (true)
             {
                 Console.WriteLine("Do you whant to enter number? Y/N");
                 string user = Console.ReadLine();
@@ -26,10 +26,7 @@ namespace Homwork9Task2
                 {
                     break;
                 }
-                else
-                {
-                    ifYes = true;
-                }
+               
             }
             IterateCollectoin(listOfNumbers);
             Console.ReadLine();
