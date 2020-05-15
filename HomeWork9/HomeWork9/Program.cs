@@ -29,7 +29,7 @@ namespace HomeWork9
 
             Console.WriteLine("Enter name");
             string userImput = Console.ReadLine();
-            string userUpper = char.ToUpper(userImput[0]) + userImput.Substring(1);
+            string userUpper = char.ToUpper(userImput[0]) + userImput.Substring(1).ToLower();
 
             bool noName = false;
 
