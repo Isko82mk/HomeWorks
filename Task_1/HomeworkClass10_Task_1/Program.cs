@@ -143,14 +143,90 @@ namespace HomeworkClass10_Task_1
                     int userGenreSelect = int.Parse(Console.ReadLine());
                     if (userGenreSelect == 1)
                     {
-                        List<string> title = mileniumMovies.Select(m => m.Title).ToList();
                         List<Movie> gener = mileniumMovies.Where(m => m.Genre == Genre.Comedy).ToList();
-                        PrintColection(title);
-
-
-
+                        PrintColection(gener);
+                        Console.WriteLine("\n" +
+                            "Chose the movie you like to wach\n");
+                        int userComedySelect = int.Parse(Console.ReadLine());
+                        if (userComedySelect == 1)
+                        {
+                            cinemaCervice.MoviePlaying(dumbAndDumber);
+                        }
+                        else
+                        {
+                            cinemaCervice.MoviePlaying(aceVentura);
+                        }
+                            
                     }
-                     
+                    else if (userGenreSelect == 2)
+                    {
+
+                        List<Movie> gener = mileniumMovies.Where(m => m.Genre == Genre.Horror).ToList();
+                        PrintColection(gener);
+                        Console.WriteLine("\n" +
+                            "Chose the movie you like to wach\n");
+                        int userComedySelect = int.Parse(Console.ReadLine());
+                        if (userComedySelect == 1)
+                        {
+                            cinemaCervice.MoviePlaying(aNightmareOnElmStreet);
+                        }
+                        else
+                        {
+                            cinemaCervice.MoviePlaying(theConjuring);
+                        }
+                    }
+                    else if (userGenreSelect == 3)
+                    {
+
+                        List<Movie> gener = mileniumMovies.Where(m => m.Genre == Genre.Action).ToList();
+                        PrintColection(gener);
+                        Console.WriteLine("\n" +
+                            "Chose the movie you like to wach\n");
+                        int userComedySelect = int.Parse(Console.ReadLine());
+                        if (userComedySelect == 1)
+                        {
+                            cinemaCervice.MoviePlaying(dieHard);
+                        }
+                        else
+                        {
+                            cinemaCervice.MoviePlaying(tangoAndCash);
+                        }
+                    }
+                    else if (userGenreSelect == 4)
+                    {
+
+                        List<Movie> gener = mileniumMovies.Where(m => m.Genre == Genre.Drama).ToList();
+                        PrintColection(gener);
+                        Console.WriteLine("\n" +
+                            "Chose the movie you like to wach\n");
+                        int userComedySelect = int.Parse(Console.ReadLine());
+                        if (userComedySelect == 1)
+                        {
+                            cinemaCervice.MoviePlaying(savingPrivateRyan);
+                        }
+                        else
+                        {
+                            cinemaCervice.MoviePlaying(theGreenMile);
+                        }
+                    }
+                    else if (userGenreSelect == 5)
+                    {
+
+                        List<Movie> gener = mileniumMovies.Where(m => m.Genre == Genre.SciFi).ToList();
+                        PrintColection(gener);
+                        Console.WriteLine("\n" +
+                            "Chose the movie you like to wach\n");
+                        int userComedySelect = int.Parse(Console.ReadLine());
+                        if (userComedySelect == 1)
+                        {
+                            cinemaCervice.MoviePlaying(matrix);
+                        }
+                        else
+                        {
+                            cinemaCervice.MoviePlaying(interstellar);
+                        }
+                    }
+
 
 
                 }
