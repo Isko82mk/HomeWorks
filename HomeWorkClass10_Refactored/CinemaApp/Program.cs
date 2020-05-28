@@ -2,6 +2,10 @@
 using Domain.Enums;
 using Domain.MovieModel;
 using Services;
+using Domain.CinemaModel;
+using System.Collections.Generic;
+using System.Net;
+using System.Linq;
 
 namespace CinemaApp
 {
@@ -9,17 +13,18 @@ namespace CinemaApp
     {
         static void Main(string[] args)
         {
-            CinemaService cinemaChuserService = new CinemaService();
-            Console.WriteLine("Welcome to the movie World.\n" +
-                "Pls. select prefered cinema by entering 1 or 2:\n" +
-                "1.Cineplexx\n" +
-                "2.Millenium ");
+            CinemaService service = new CinemaService();
+            service.CinemaRepertuar();
 
-            string userCinemaSelect =  Console.ReadLine();
+            Console.WriteLine("\n" +
+            "Pls. select prefered cinema by entering 1 or 2:\n" +
+            "1.Cineplexx\n" +
+            "2.Millenium ");
+
+            string userCinemaSelect = Console.ReadLine();
             char[] cinemaChars = userCinemaSelect.ToCharArray();
-             cinemaChuserService.CinemaChuser(cinemaChars);
-             Console.ReadLine();
+            service.CinemaChuser(cinemaChars);
+            Console.ReadKey();
         }
-
     }
 }
