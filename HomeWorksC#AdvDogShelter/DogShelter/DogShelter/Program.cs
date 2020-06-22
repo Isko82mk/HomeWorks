@@ -1,4 +1,9 @@
 ﻿using System;
+using System.Collections.Generic;
+using DogShelter.Domain;
+using DogShelter.Domain.Core.Enteties;
+using DogShelter.Domain.DB;
+using Services.Helpers;
 
 namespace DogShelter
 {
@@ -13,42 +18,15 @@ namespace DogShelter
             Dog jecky = new Dog() { Name = "Jecky", Id = -2, Color = "black/white" };
             Dog suzi = new Dog() { Name = "S", Id = 15, Color = "red/white/brown" };
 
+            Filtration.DogFiltration(jony);
+            Filtration.DogFiltration(mike);
+            Filtration.DogFiltration(persi);
+            Filtration.DogFiltration(jecky);
+            Filtration.DogFiltration(suzi);
 
-            //Dog.Validate(jony);
-            //Dog.Validate(mike);
-            //Dog.Validate(persi);
-
-            Filtration(jony);
-            Filtration(mike);
-            Filtration(persi);
-            Filtration(jecky);
-            Filtration(suzi);
-            DogShelter.PrintAll(DogShelter.ListOfDogs);
-
+            DogShelterDB.PrintAll(DogShelterDB.ListOfDogs);
 
             Console.ReadKey();
         }
-
-        public static void Filtration(Dog dog)
-        {
-           bool isValid=Dog.Validate(dog);
-
-            if (isValid)
-            {
-                Console.WriteLine($"Dog { dog.Name}  have valid id and name ");
-
-                DogShelter.ListOfDogs.Add(dog);
-                Console.WriteLine($"Dog with ID:{dog.Id} and Name:{ dog.Name} is addet to the dog shelter");
-                //DogShelter.PrintAll(DogShelter.ListOfDogs);
-            }
-            else 
-            {
-                Console.WriteLine("Dog does not have valid id or name");
-            }
-
-        }
-
-
-
     }
 }

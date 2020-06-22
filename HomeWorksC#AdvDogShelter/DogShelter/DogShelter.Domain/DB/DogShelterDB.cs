@@ -1,15 +1,20 @@
-﻿using System;
+﻿using DogShelter.Domain.Core.Enteties;
+using System;
 using System.Collections.Generic;
+using System.Text;
 
-namespace DogShelter
+namespace DogShelter.Domain.DB
 {
-    public static class DogShelter
+   public static class DogShelterDB
     {
+
         public static List<Dog> ListOfDogs;
-        static DogShelter()
+
+        static DogShelterDB()
         {
             ListOfDogs = new List<Dog>() { };
         }
+
         public static void PrintAll(List<Dog> ListOfDogs)
         {
             string list = "***List of dogs in the shelter***";
@@ -19,5 +24,8 @@ namespace DogShelter
                 Console.WriteLine($"\n\rDog ID : {d.Id}, Name: {d.Name}, Color: {d.Color}");
             }
         }
+
+
+
     }
 }

@@ -1,9 +1,8 @@
-﻿using System;
-
-namespace DogShelter
+﻿namespace DogShelter.Domain.Core.Enteties
 {
     public class Dog
     {
+
         private int _id;
         private string _name;
         public string Color { get; set; }
@@ -35,5 +34,8 @@ namespace DogShelter
             get { return _name; }
             set { _name = value; }
         }
+
+
+
     }
 }
