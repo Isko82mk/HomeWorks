@@ -4,10 +4,10 @@ using System.Text;
 
 namespace Domain
 {
-  public enum Tipe
-    {
-      Dog,
-      Cat,
-      Fish
-    }
+//  public enum Tipe
+//    {
+//      Dog,
+//      Cat,
+//      Fish
+//    }
 }
